@@ -20,7 +20,7 @@ app.post('/submit', (req, res) => {
     console.log('Received Data:', data.name);
 
     res.status(200).json({
-        message: 'Data received successfully',
+        message: 'Data saved successfully',
         receivedData: data
     });
 });
