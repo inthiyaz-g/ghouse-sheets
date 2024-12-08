@@ -24,6 +24,14 @@ app.post('/submit', (req, res) => {
         receivedData: data
     });
 });
+app.get('/', (req, res) => {
+    const data = req.body;
+    postData(data);
+
+    console.log('Received Data:', data.name);
+
+    res.json({ message: 'This is a JSON response from the GET endpoint!' });
+});
 
 // Start the server
 
